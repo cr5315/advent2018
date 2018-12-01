@@ -5,8 +5,7 @@ object Day01 {
     fun partTwo(input: String): Int {
         val frequencies = inputAsIntList(input)
         var currentFrequency = 0
-        val pastFrequencies = HashSet<Int>()
-        pastFrequencies.add(currentFrequency) // The first frequency counts I guess
+        val pastFrequencies = mutableSetOf(0)
 
         while (true) {
             for (frequency in frequencies) {
